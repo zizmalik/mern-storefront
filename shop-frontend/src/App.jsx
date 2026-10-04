@@ -13,7 +13,7 @@ function App() {
   const [isRegisterMode, setIsRegisterMode] = useState(false)
 
   const fetchProducts = () => {
-    fetch('http://localhost:5000/api/products')
+   fetch('https://loca.lt')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error(err))
@@ -25,7 +25,7 @@ function App() {
 
   const handleLogin = (e) => {
     e.preventDefault()
-    fetch('http://localhost:5000/api/auth/login', {
+    fetch('https://loca.lt', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -46,7 +46,7 @@ function App() {
 
   const handleRegister = (e) => {
     e.preventDefault()
-    fetch('http://localhost:5000/api/auth/register', {
+    fetch('https://loca.lt', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username: regUsername, email: regEmail, password: regPassword })
