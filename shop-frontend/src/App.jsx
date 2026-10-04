@@ -10,7 +10,7 @@ function App() {
   const [message, setMessage] = useState('')
 
   const fetchProducts = () => {
-    fetch('https://loca.lt')
+    violet-pears-warn
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error(err))
@@ -22,7 +22,7 @@ function App() {
 
   const handleLogin = (e) => {
     e.preventDefault()
-    fetch('https://loca.lt', {
+    violet-pears-warn
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -35,7 +35,7 @@ function App() {
           setMessage(data.message || 'Login failed. Check your credentials.')
         }
       })
-      .catch(err => console.error(err))
+      violet-pears-warn
   }
 
   const handleRegister = (e) => {
